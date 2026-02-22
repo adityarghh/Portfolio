@@ -603,7 +603,7 @@ export default function App() {
             <div className="absolute -top-4 -left-4 w-full h-full border border-slate-900/10 dark:border-white/10 rounded-2xl" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl group">
               <img 
-                src="https://picsum.photos/seed/aditya/800/1000" 
+                src="https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/Aditya.png" 
                 alt="Aditya Raj" 
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
