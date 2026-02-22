@@ -79,7 +79,7 @@ const PROJECTS: Project[] = [
     category: "AI",
     tags: ["Python", "Machine Learning", "Semantic Search"],
     description: "A semantic analysis system focused on intelligent interpretation and contextual understanding.",
-    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/download%20(10).jpg",
+    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/sematic.jpg",
     github: "https://github.com/adityarghh/Offroad-Semantic.git",
     link: "https://github.com/adityarghh/Offroad-Semantic.git"
   },
@@ -89,7 +89,7 @@ const PROJECTS: Project[] = [
     category: "AI",
     tags: ["Python", "NLP", "Retrieval"],
     description: "An AI-powered document querying system designed to extract insights from structured and unstructured text data.",
-    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/Bucky%20Barnes%20aesthetic.jpg",
+    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/docuquery.jpg",
     github: "https://github.com/adityarghh/DocuQuery.git",
     link: "https://github.com/adityarghh/DocuQuery.git"
   },
@@ -99,7 +99,7 @@ const PROJECTS: Project[] = [
     category: "Academic",
     tags: ["Distributed Systems", "Networking", "Concurrency"],
     description: "A distributed communication system demonstrating networking concepts and concurrent architecture design.",
-    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/10%20Inspirational%20Quotes%20Of%20The%20Day%20(447)%20-%20LifeHack.jpg",
+    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/download%20(11).jpg",
     github: "https://github.com/adityarghh/Distributed-chat-system.git",
     link: "https://github.com/adityarghh/Distributed-chat-system.git"
   },
