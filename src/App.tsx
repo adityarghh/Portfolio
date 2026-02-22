@@ -787,7 +787,7 @@ export default function App() {
               {TIMELINE.map((item, idx) => (
                 <div key={idx} className={`relative md:grid md:grid-cols-[1fr_3rem_1fr] items-center fade-in stagger-${(idx % 3) + 1}`}>
                   {/* Left Side */}
-                  <div className="md:order-1 md:text-right">
+<div className="hidden md:block md:order-1 md:text-right">
                     {idx % 2 === 0 && (
                       <div className="md:pr-14">
                         <span className="text-xs font-bold uppercase tracking-widest opacity-40 mb-2 block">{item.period}</span>
@@ -804,7 +804,7 @@ export default function App() {
                   </div>
 
                   {/* Right Side */}
-                  <div className="md:order-3 md:text-left">
+                 <div className="hidden md:block md:order-3 md:text-left">
                     {idx % 2 !== 0 && (
                       <div className="md:pl-14">
                         <span className="text-xs font-bold uppercase tracking-widest opacity-40 mb-2 block">{item.period}</span>
