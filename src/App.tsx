@@ -79,7 +79,7 @@ const PROJECTS: Project[] = [
     category: "AI",
     tags: ["Python", "Machine Learning", "Semantic Search"],
     description: "A semantic analysis system focused on intelligent interpretation and contextual understanding.",
-    image: "https://picsum.photos/seed/ml/600/400",
+    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/download%20(10).jpg",
     github: "https://github.com/adityarghh/Offroad-Semantic.git",
     link: "https://github.com/adityarghh/Offroad-Semantic.git"
   },
@@ -89,7 +89,7 @@ const PROJECTS: Project[] = [
     category: "AI",
     tags: ["Python", "NLP", "Retrieval"],
     description: "An AI-powered document querying system designed to extract insights from structured and unstructured text data.",
-    image: "https://picsum.photos/seed/doc/600/400",
+    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/Bucky%20Barnes%20aesthetic.jpg",
     github: "https://github.com/adityarghh/DocuQuery.git",
     link: "https://github.com/adityarghh/DocuQuery.git"
   },
