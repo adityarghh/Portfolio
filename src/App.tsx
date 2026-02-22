@@ -883,28 +883,38 @@ export default function App() {
                 <span className="text-xs uppercase tracking-widest opacity-60">Year Student</span>
               </div>
               <div className="bg-white/5 p-6 rounded-2xl">
-                <span className="block text-2xl font-display font-bold">AI</span>
+                <span className="block text-2xl font-display font-bold">AI & ML</span>
                 <span className="text-xs uppercase tracking-widest opacity-60">Specialisation</span>
               </div>
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <a href="#" className="px-8 py-4 bg-beige-100 text-slate-900 rounded-full font-semibold flex items-center gap-2 hover:scale-105 transition-transform">
+              <a 
+  href="/Aditya_Raj_Resume.pdf"
+  download
+  className="px-8 py-4 bg-beige-100 text-slate-900 rounded-full font-semibold flex items-center gap-2 hover:scale-105 transition-transform"
+>
                 <Download size={18} /> Download PDF
               </a>
-              <a href="#" className="px-8 py-4 border border-beige-100 rounded-full font-semibold hover:bg-beige-100 hover:text-slate-900 transition-all">
+              <a 
+  href="/Aditya_Raj_Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-8 py-4 border border-beige-100 rounded-full font-semibold hover:bg-beige-100 hover:text-slate-900 transition-all"
+>
                 View Online
               </a>
             </div>
           </div>
           
           <div className="relative fade-in stagger-2">
-            <div className="aspect-[3/4] bg-white/5 rounded-3xl border border-white/5 p-8 flex flex-col justify-center items-center text-center">
-              <div className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center mb-6">
-                <BookOpen size={32} className="opacity-20" />
-              </div>
-              <p className="text-sm opacity-40 italic">Decorative Resume Preview Placeholder</p>
-            </div>
+            <div className="aspect-[3/4] rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+  <iframe
+    src="/Aditya_Raj_Resume.pdf"
+    className="w-full h-full"
+    title="Resume Preview"
+  />
+</div>
             {/* Decorative elements */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#c9a84c]/10 rounded-full blur-3xl" />
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-white/5 rounded-full blur-3xl" />
