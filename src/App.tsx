@@ -198,7 +198,9 @@ const MILESTONES: Milestone[] = [
   { title: "International Academic Engagement", issuer: "VLU Global Talk — Van Lang University", date: "Aug 2025" },
   { title: "Cyber Risk & Compliance Masterclass", issuer: "Risk & Compliance — University of San Diego", date: "Aug 2025" },
   { title: "Machine Learning Foundations", issuer: "Intro to ML Concepts — Completion", date: "Jul 2025" },
-  { title: "AWS Industry Workshop", issuer: "Amazon Q in Code & Play — AWS Cloud Club, VIT", date: "Aug 2025" }
+  { title: "AWS Industry Workshop", issuer: "Amazon Q in Code & Play — AWS Cloud Club, VIT", date: "Aug 2025" },
+  { title: "Deloitte Australia Data Analytics Job Simulation",issuer: "Forage — Tableau & Excel Analytics",date: "Feb 2026"},
+  {title: "Deloitte Australia Cyber Security Job Simulation",issuer: "Forage — Log Analysis & Threat Detection",date: "Feb 2026"},
 ];
 
 // --- Components ---
