@@ -109,7 +109,7 @@ const PROJECTS: Project[] = [
     category: "Academic",
     tags: ["Java", "OOP", "Simulation"],
     description: "A simulation-based banking system showcasing object-oriented design and structured logic.",
-    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/what's%20your%20plan%20for%20today_.jpg",
+    image: "https://github.dev/adityarghh/Portfolio-Aditya/blob/main/bankmanagement.jpg",
     github: "https://github.com/adityarghh/Bank-Management-Simulation.git",
     link: "https://github.com/adityarghh/Bank-Management-Simulation.git"
   },
