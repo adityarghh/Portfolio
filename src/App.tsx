@@ -69,7 +69,7 @@ const PROJECTS: Project[] = [
     category: "Web",
     tags: ["Flask", "JavaScript", "Security"],
     description: "A Flask-based password security assessment tool that analyzes password strength and resilience using modern validation techniques.",
-    image: "https://picsum.photos/seed/pass/600/400",
+    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/Apple%20Just%20Killed%20the%20Password%E2%80%94for%20Real%20This%20Time.jpg",
     github: "https://github.com/adityarghh/PassSecure.git",
     link: "https://github.com/adityarghh/PassSecure.git"
   },
