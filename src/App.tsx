@@ -99,7 +99,7 @@ const PROJECTS: Project[] = [
     category: "Academic",
     tags: ["Distributed Systems", "Networking", "Concurrency"],
     description: "A distributed communication system demonstrating networking concepts and concurrent architecture design.",
-    image: "https://picsum.photos/seed/chat/600/400",
+    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/10%20Inspirational%20Quotes%20Of%20The%20Day%20(447)%20-%20LifeHack.jpg",
     github: "https://github.com/adityarghh/Distributed-chat-system.git",
     link: "https://github.com/adityarghh/Distributed-chat-system.git"
   },
@@ -109,7 +109,7 @@ const PROJECTS: Project[] = [
     category: "Academic",
     tags: ["Java", "OOP", "Simulation"],
     description: "A simulation-based banking system showcasing object-oriented design and structured logic.",
-    image: "https://picsum.photos/seed/bank/600/400",
+    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/what's%20your%20plan%20for%20today_.jpg",
     github: "https://github.com/adityarghh/Bank-Management-Simulation.git",
     link: "https://github.com/adityarghh/Bank-Management-Simulation.git"
   },
@@ -119,7 +119,7 @@ const PROJECTS: Project[] = [
     category: "Academic",
     tags: ["Java", "OOP", "Database"],
     description: "A structured library system application demonstrating database handling and modular design.",
-    image: "https://picsum.photos/seed/lib/600/400",
+    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/%23ikea%20%F0%9F%92%A1.jpg",
     github: "https://github.com/adityarghh/Library-Management-System.git",
     link: "https://github.com/adityarghh/Library-Management-System.git"
   }
