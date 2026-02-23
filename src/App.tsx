@@ -938,7 +938,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-16 fade-in">
             <h2 className="text-sm uppercase tracking-widest mb-4 opacity-60">Get In Touch</h2>
-            <h3 className="text-4xl md:text-6xl font-display font-bold mb-6">Let's *Connect*</h3>
+            <h3 className="text-4xl md:text-6xl font-display font-bold mb-6">Start a  conversation</h3>
             <p className="opacity-70 max-w-xl mx-auto leading-relaxed">
               I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
