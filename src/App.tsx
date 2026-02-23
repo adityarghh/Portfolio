@@ -23,6 +23,7 @@ import {
   BookOpen,
   Cpu
 } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
 // --- Types ---
 type ProjectCategory = 'All' | 'Web' | 'AI' | 'Academic';
@@ -422,6 +423,7 @@ const MouseGlow = () => {
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>('All');
+  const [formState, handleSubmit] = useForm("xdalpkpz");
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -944,26 +946,57 @@ export default function App() {
 
           <div className="grid md:grid-cols-[1fr_auto_1fr] gap-12 items-start text-left">
             <div className="fade-in stagger-1">
-              <form className="space-y-4">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full px-6 py-4 bg-[#1e1e1e] border border-transparent focus:border-white/20 outline-none rounded-xl transition-all"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full px-6 py-4 bg-[#1e1e1e] border border-transparent focus:border-white/20 outline-none rounded-xl transition-all"
-                />
-                <textarea 
-                  placeholder="Message" 
-                  rows={4}
-                  className="w-full px-6 py-4 bg-[#1e1e1e] border border-transparent focus:border-white/20 outline-none rounded-xl transition-all resize-none"
-                />
-                <button className="w-full py-4 bg-beige-100 text-slate-900 rounded-xl font-semibold hover:opacity-90 transition-opacity">
-                  Send Message
-                </button>
-              </form>
+              <form onSubmit={handleSubmit} className="space-y-4">
+  <input 
+    type="text" 
+    name="name"
+    placeholder="Name" 
+    required
+    className="w-full px-6 py-4 bg-[#1e1e1e] border border-transparent focus:border-white/20 outline-none rounded-xl transition-all"
+  />
+
+  <input 
+    type="email" 
+    name="email"
+    placeholder="Email" 
+    required
+    className="w-full px-6 py-4 bg-[#1e1e1e] border border-transparent focus:border-white/20 outline-none rounded-xl transition-all"
+  />
+
+  <ValidationError 
+    prefix="Email" 
+    field="email"
+    errors={formState.errors}
+  />
+
+  <textarea 
+    name="message"
+    placeholder="Message" 
+    rows={4}
+    required
+    className="w-full px-6 py-4 bg-[#1e1e1e] border border-transparent focus:border-white/20 outline-none rounded-xl transition-all resize-none"
+  />
+
+  <ValidationError 
+    prefix="Message" 
+    field="message"
+    errors={formState.errors}
+  />
+
+  <button 
+    type="submit" 
+    disabled={formState.submitting}
+    className="w-full py-4 bg-beige-100 text-slate-900 rounded-xl font-semibold hover:opacity-90 transition-opacity"
+  >
+    {formState.submitting ? "Sending..." : "Send Message"}
+  </button>
+
+  {formState.succeeded && (
+    <p className="text-[#c9a84c] text-sm mt-4">
+      Thanks for reaching out. I’ll get back to you shortly.
+    </p>
+  )}
+</form>
             </div>
 
             <div className="hidden md:block w-px h-full bg-white/10" />
