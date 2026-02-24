@@ -100,7 +100,7 @@ const PROJECTS: Project[] = [
     category: "Academic",
     tags: ["Distributed Systems", "Networking", "Concurrency"],
     description: "A distributed communication system demonstrating networking concepts and concurrent architecture design.",
-    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/download%20(11).jpg",
+    image: "https://github.com/adityarghh/download-11.jpg",
     github: "https://github.com/adityarghh/Distributed-chat-system.git",
     link: "https://github.com/adityarghh/Distributed-chat-system.git"
   },
@@ -607,7 +607,7 @@ export default function App() {
             <div className="absolute -top-4 -left-4 w-full h-full border border-slate-900/10 dark:border-white/10 rounded-2xl" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl group">
               <img 
-                src="https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/Aditya.png" 
+                src="https://github.com/adityarghh/Aditya.git" 
                 alt="Aditya Raj" 
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
