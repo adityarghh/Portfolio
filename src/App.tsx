@@ -70,7 +70,7 @@ const PROJECTS: Project[] = [
     category: "Web",
     tags: ["Flask", "JavaScript", "Security"],
     description: "A Flask-based password security assessment tool that analyzes password strength and resilience using modern validation techniques.",
-    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/Apple%20Just%20Killed%20the%20Password%E2%80%94for%20Real%20This%20Time.jpg",
+    image: "/images/projects/passmgmt.jpg",
     github: "https://github.com/adityarghh/PassSecure.git",
     link: "https://github.com/adityarghh/PassSecure.git"
   },
@@ -100,7 +100,7 @@ const PROJECTS: Project[] = [
     category: "Academic",
     tags: ["Distributed Systems", "Networking", "Concurrency"],
     description: "A distributed communication system demonstrating networking concepts and concurrent architecture design.",
-    image: "https://github.com/adityarghh/download-11.jpg",
+    image: "/images/projects/download-11.jpg",
     github: "https://github.com/adityarghh/Distributed-chat-system.git",
     link: "https://github.com/adityarghh/Distributed-chat-system.git"
   },
@@ -390,6 +390,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   );
 };
 
+
 const MouseGlow = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
@@ -419,6 +420,52 @@ const MouseGlow = () => {
       }} 
     />
   );
+};const CursorFollower = () => {
+  const [label, setLabel] = useState('');
+  const [visible, setVisible] = useState(false);
+  const followerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const move = (e: MouseEvent) => {
+      if (followerRef.current) {
+        followerRef.current.style.left = e.clientX + 'px';
+        followerRef.current.style.top = e.clientY + 'px';
+      }
+    };
+
+    const over = (e: MouseEvent) => {
+      const el = (e.target as HTMLElement).closest('[data-cursor]');
+      if (el) {
+        setLabel(el.getAttribute('data-cursor') || '');
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseover', over);
+    return () => {
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('mouseover', over);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={followerRef}
+      className="fixed pointer-events-none z-[9999] flex items-center justify-center"
+      style={{ transform: 'translate(10px, -100%)' }}
+    >
+      <motion.div
+        animate={{ scale: visible ? 1 : 0, opacity: visible ? 1 : 0 }}
+        transition={{ duration: 0.15 }}
+        className="bg-accent text-slate-900 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full whitespace-nowrap"
+      >
+        {label}
+      </motion.div>
+    </div>
+  );
 };
 
 export default function App() {
@@ -427,7 +474,17 @@ export default function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const bodyRef = useRef<HTMLDivElement>(null);
+const [activeSection, setActiveSection] = useState('home');
+const bodyRef = useRef<HTMLDivElement>(null);
+
+useEffect(() => {
+    const sections = document.querySelectorAll('section[id]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) setActiveSection(e.target.id); });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
 
   // Intersection Observer for animations
   useEffect(() => {
@@ -478,6 +535,7 @@ export default function App() {
   return (
     <div ref={bodyRef} className="min-h-screen selection:bg-accent selection:text-slate-900">
       <MouseGlow />
+      <CursorFollower />
       {/* Scroll Progress Bar */}
       <div 
         className="fixed top-0 left-0 h-1 bg-accent z-[100] transition-all duration-100"
@@ -495,7 +553,12 @@ export default function App() {
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`} 
-                className="text-sm font-medium text-accent hover:opacity-60 transition-opacity"
+                className={[
+  'text-sm font-medium text-accent transition-all',
+  activeSection === item.toLowerCase()
+    ? 'opacity-100 border-b border-accent pb-0.5'
+    : 'opacity-40 hover:opacity-100'
+].join(' ')}
               >
                 {item}
               </a>
@@ -593,6 +656,19 @@ export default function App() {
         </div>
       </section>
 
+      {/* Scrolling Ticker */}
+      <div className="overflow-hidden border-y border-white/40 py-4 bg-[#0f0f0f]">
+  <div style={{ display: 'flex', whiteSpace: 'nowrap', animation: 'ticker 25s linear infinite', alignItems: 'center' }}>
+    {['Python', 'Machine Learning', 'React', 'Java', 'Flask', 'NLP', 'Distributed Systems', 'Scikit-learn', 'TailwindCSS', 'Event Anchoring',
+      'Python', 'Machine Learning', 'React', 'Java', 'Flask', 'NLP', 'Distributed Systems', 'Scikit-learn', 'TailwindCSS', 'Event Anchoring'
+    ].map((item, i) => (
+      <span key={i} style={{ fontFamily: 'monospace', fontSize: '0.9rem', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '0 4rem', color: 'white', display: 'inline-flex', alignItems: 'center', gap: '4rem' }}>
+        {item} <span style={{ color: 'white', fontSize: '0.4rem' }}>●</span>
+      </span>
+    ))}
+  </div>
+</div>
+
       {/* About Section */}
       <motion.section 
         id="about" 
@@ -605,9 +681,9 @@ export default function App() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="relative fade-in">
             <div className="absolute -top-4 -left-4 w-full h-full border border-slate-900/10 dark:border-white/10 rounded-2xl" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl group">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl group" data-cursor="That's me">
               <img 
-                src="https://github.com/adityarghh/Aditya.jpg" 
+                src="/images/profile/Aditya.jpg" 
                 alt="Aditya Raj" 
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
@@ -719,15 +795,16 @@ export default function App() {
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project) => (
                 <TiltCard key={project.id}>
-                  <motion.div
-                    layout
-                    data-cat={project.category}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4 }}
-                    className="group bg-beige-50 dark:bg-[#0f0f0f] rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-900/5 dark:border-white/5 h-full"
-                  >
+  <motion.div
+    layout
+    data-cursor="View Project"
+    data-cat={project.category}
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0, scale: 0.9 }}
+    transition={{ duration: 0.4 }}
+    className="group bg-beige-50 dark:bg-[#0f0f0f] rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-900/5 dark:border-white/5 h-full"
+  >
                     <div className="aspect-video overflow-hidden relative">
                       <img 
                         src={project.image} 
