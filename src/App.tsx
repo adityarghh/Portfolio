@@ -80,7 +80,7 @@ const PROJECTS: Project[] = [
     category: "AI",
     tags: ["Python", "Machine Learning", "Semantic Search"],
     description: "A semantic analysis system focused on intelligent interpretation and contextual understanding.",
-    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/sematic.jpg",
+    image: "/images/projects/sematic.jpg",
     github: "https://github.com/adityarghh/Offroad-Semantic.git",
     link: "https://github.com/adityarghh/Offroad-Semantic.git"
   },
@@ -90,7 +90,7 @@ const PROJECTS: Project[] = [
     category: "AI",
     tags: ["Python", "NLP", "Retrieval"],
     description: "An AI-powered document querying system designed to extract insights from structured and unstructured text data.",
-    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/docuquery.jpg",
+    image: "/images/projects/docuquery.jpg",
     github: "https://github.com/adityarghh/DocuQuery.git",
     link: "https://github.com/adityarghh/DocuQuery.git"
   },
@@ -120,7 +120,7 @@ const PROJECTS: Project[] = [
     category: "Academic",
     tags: ["Java", "OOP", "Database"],
     description: "A structured library system application demonstrating database handling and modular design.",
-    image: "https://raw.githubusercontent.com/adityarghh/Portfolio-Aditya/main/%23ikea%20%F0%9F%92%A1.jpg",
+    image: "/images/projects/ikea.jpg",
     github: "https://github.com/adityarghh/Library-Management-System.git",
     link: "https://github.com/adityarghh/Library-Management-System.git"
   }
