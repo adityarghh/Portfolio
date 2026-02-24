@@ -17,7 +17,7 @@ A modern, interactive personal portfolio built using React + Vite and deployed o
 - Lucide Icons
 
 ## 🔗 Live Site
-https://portfolio-aditya-seven-rho.vercel.app/
+https://portfolio-pied-tau-95.vercel.app/
 
 ## 📄 Resume
 Available directly on the site via embedded preview and download.
